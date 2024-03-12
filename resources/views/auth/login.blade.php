@@ -33,8 +33,8 @@
                 <div class="card-body">
                     <form id="login" method="post" action="{{ url('/login') }}">
                         @csrf
-                        <h1>Login</h1>
-                        <p class="text-muted">Sign In to your account</p>
+                        <h1>{{ trans('public.Login') }}</h1>
+                        <p class="text-muted">{{ trans('public.SignIntoyouraccount') }}</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -65,7 +65,7 @@
                             <div class="col-4">
                                 <button id="submit" class="btn btn-primary px-4 d-flex align-items-center"
                                         type="submit">
-                                    Login
+                                  {{ trans('public.Login') }}  
                                     <div id="spinner" class="spinner-border text-info" role="status"
                                          style="height: 20px;width: 20px;margin-left: 5px;display: none;">
                                         <span class="sr-only">Loading...</span>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="col-8 text-right">
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
-                                    Forgot password?
+                                  {{ trans('public.Forgotpassword') }}  ?
                                 </a>
                             </div>
                         </div>

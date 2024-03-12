@@ -8,10 +8,10 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('purchase-returns.index') }}">Purcase Returns</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ trans('public.Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('purchase-returns.index') }}">{{ trans('public.PurchaseReturns') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('purchases.show', $purchase_return) }}">{{ $purchase_return->reference }}</a></li>
-        <li class="breadcrumb-item active">Payments</li>
+        <li class="breadcrumb-item active">{{ trans('public.Payments') }}</li>
     </ol>
 @endsection
 

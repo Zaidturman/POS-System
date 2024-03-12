@@ -7,7 +7,7 @@
                         <div class="form-row">
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>Start Date <span class="text-danger">*</span></label>
+                                    <label>{{ trans('public.StartDate') }} <span class="text-danger">*</span></label>
                                     <input wire:model="start_date" type="date" class="form-control" name="start_date">
                                     @error('start_date')
                                     <span class="text-danger mt-1">{{ $message }}</span>
@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>End Date <span class="text-danger">*</span></label>
+                                    <label>{{ trans('public.EndDate') }} <span class="text-danger">*</span></label>
                                     <input wire:model="end_date" type="date" class="form-control" name="end_date">
                                     @error('end_date')
                                     <span class="text-danger mt-1">{{ $message }}</span>
@@ -25,9 +25,9 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>Supplier</label>
+                                    <label>{{ trans('public.Supplier') }}</label>
                                     <select wire:model="supplier_id" class="form-control" name="supplier_id">
-                                        <option value="">Select Supplier</option>
+                                        <option value="">{{ trans('public.SelectSupplier') }}</option>
                                         @foreach($suppliers as $supplier)
                                             <option value="{{ $supplier->id }}">{{ $supplier->supplier_name }}</option>
                                         @endforeach
@@ -38,23 +38,23 @@
                         <div class="form-row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Status</label>
+                                    <label>{{ trans('public.Status') }}</label>
                                     <select wire:model="purchase_status" class="form-control" name="purchase_status">
-                                        <option value="">Select Status</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Ordered">Ordered</option>
-                                        <option value="Completed">Completed</option>
+                                        <option value="">{{ trans('public.SelectStatus') }}</option>
+                                        <option value="Pending">{{ trans('public.Pending') }}</option>
+                                        <option value="Ordered">{{ trans('public.Ordered') }}</option>
+                                        <option value="Completed">{{ trans('public.Completed') }}</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payment Status</label>
+                                    <label>{{ trans('public.PaymentStatus') }}</label>
                                     <select wire:model="payment_status" class="form-control" name="payment_status">
-                                        <option value="">Select Payment Status</option>
-                                        <option value="Paid">Paid</option>
-                                        <option value="Unpaid">Unpaid</option>
-                                        <option value="Partial">Partial</option>
+                                        <option value="">{{ trans('public.SelectPaymentStatus') }}</option>
+                                        <option value="Paid">{{ trans('public.Paid') }}</option>
+                                        <option value="Unpaid">{{ trans('public.Unpaid') }}</option>
+                                        <option value="Partial">{{ trans('public.Partial') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                             <button type="submit" class="btn btn-primary">
                                 <span wire:target="generateReport" wire:loading class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                 <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i>
-                                Filter Report
+                                {{ trans('public.FilterReport') }}
                             </button>
                         </div>
                     </form>

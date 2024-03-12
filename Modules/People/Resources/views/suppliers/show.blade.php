@@ -4,9 +4,9 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('suppliers.index') }}">Suppliers</a></li>
-        <li class="breadcrumb-item active">Details</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ trans('public.Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('suppliers.index') }}">{{ trans('public.Suppliers') }}</a></li>
+        <li class="breadcrumb-item active">{{ trans('public.Details') }}</li>
     </ol>
 @endsection
 
@@ -19,27 +19,27 @@
                         <div class="table-responsive">
                             <table class="table table-bordered">
                                 <tr>
-                                    <th>Supplier Name</th>
+                                    <th>{{ trans('public.SupplierName') }}</th>
                                     <td>{{ $supplier->supplier_name }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Supplier Email</th>
+                                    <th>{{ trans('public.Email') }}</th>
                                     <td>{{ $supplier->supplier_email }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Supplier Phone</th>
+                                    <th>{{ trans('public.Phone') }}</th>
                                     <td>{{ $supplier->supplier_phone }}</td>
                                 </tr>
                                 <tr>
-                                    <th>City</th>
+                                    <th>{{ trans('public.City') }}</th>
                                     <td>{{ $supplier->city }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Country</th>
+                                    <th>{{ trans('public.Country') }}</th>
                                     <td>{{ $supplier->country }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Address</th>
+                                    <th>{{ trans('public.Address') }}</th>
                                     <td>{{ $supplier->address }}</td>
                                 </tr>
                             </table>

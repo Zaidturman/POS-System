@@ -7,7 +7,7 @@
                         <div class="form-row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Start Date <span class="text-danger">*</span></label>
+                                    <label>{{ trans('public.StartDate') }}  <span class="text-danger">*</span></label>
                                     <input wire:model="start_date" type="date" class="form-control" name="start_date">
                                     @error('start_date')
                                     <span class="text-danger mt-1">{{ $message }}</span>
@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>End Date <span class="text-danger">*</span></label>
+                                    <label>{{ trans('public.StartDate') }} <span class="text-danger">*</span></label>
                                     <input wire:model="end_date" type="date" class="form-control" name="end_date">
                                     @error('end_date')
                                     <span class="text-danger mt-1">{{ $message }}</span>
@@ -27,13 +27,13 @@
                         <div class="form-row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payments</label>
+                                    <label>{{ trans('public.Payments') }}</label>
                                     <select wire:model.live="payments" class="form-control" name="payments">
-                                        <option value="">Select Payments</option>
-                                        <option value="sale">Sales</option>
-                                        <option value="sale_return">Sale Returns</option>
-                                        <option value="purchase">Purchase</option>
-                                        <option value="purchase_return">Purchase Returns</option>
+                                        <option value="">{{ trans('public.SelectPayments') }}</option>
+                                        <option value="sale">{{ trans('public.Sales') }}</option>
+                                        <option value="sale_return">{{ trans('public.SaleReturns') }}</option>
+                                        <option value="purchase">{{ trans('public.Purchase') }}</option>
+                                        <option value="purchase_return">{{ trans('public.PurchaseReturns') }}</option>
                                     </select>
                                     @error('payments')
                                     <span class="text-danger mt-1">{{ $message }}</span>
@@ -42,14 +42,14 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payment Method</label>
+                                    <label>{{ trans('public.PaymentMethod') }}</label>
                                     <select wire:model="payment_method" class="form-control" name="payment_method">
-                                        <option value="">Select Payment Method</option>
-                                        <option value="Cash">Cash</option>
-                                        <option value="Credit Card">Credit Card</option>
-                                        <option value="Bank Transfer">Bank Transfer</option>
-                                        <option value="Cheque">Cheque</option>
-                                        <option value="Other">Other</option>
+                                        <option value="">{{ trans('public.SelectPaymentMethod') }}</option>
+                                        <option value="Cash">{{ trans('public.Cash') }}</option>
+                                        <option value="Credit Card">{{ trans('public.CreditCard') }}</option>
+                                        <option value="Bank Transfer">{{ trans('public.BankTransfer') }}</option>
+                                        <option value="Cheque">{{ trans('public.Cheque') }}</option>
+                                        <option value="Other">{{ trans('public.Other') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                             <button type="submit" class="btn btn-primary">
                                 <span wire:target="generateReport" wire:loading class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                 <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i>
-                                Filter Report
+                               {{ trans('public.FilterReport') }} 
                             </button>
                         </div>
                     </form>

@@ -4,9 +4,9 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('customers.index') }}">Customers</a></li>
-        <li class="breadcrumb-item active">Add</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ trans('public.Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('customers.index') }}">{{ trans('public.Customers') }}</a></li>
+        <li class="breadcrumb-item active">{{ trans('public.Add') }}</li>
     </ol>
 @endsection
 
@@ -18,7 +18,7 @@
                 <div class="col-lg-12">
                     @include('utils.alerts')
                     <div class="form-group">
-                        <button class="btn btn-primary">Create Customer <i class="bi bi-check"></i></button>
+                        <button class="btn btn-primary">{{ trans('public.CreateCustomer') }} <i class="bi bi-check"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -27,14 +27,14 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="customer_name">Customer Name <span class="text-danger">*</span></label>
+                                        <label for="customer_name">{{ trans('public.CustomerName') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="customer_name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="customer_email">Email <span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" name="customer_email" required>
+                                        <label for="customer_email">{{ trans('public.Email') }} <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" name="customer_email" >
                                     </div>
                                 </div>
                             </div>
@@ -42,20 +42,20 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="customer_phone">Phone <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="customer_phone" required>
+                                        <label for="customer_phone">{{ trans('public.Phone') }} <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="customer_phone" >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="city">City <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="city" required>
+                                        <label for="city">{{ trans('public.City') }} <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="city" >
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="country">Country <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="country" required>
+                                        <label for="country">{{ trans('public.Country') }} <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="country" >
                                     </div>
                                 </div>
                             </div>
@@ -63,8 +63,8 @@
                             <div class="form-row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label for="address">Address <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" name="address" required>
+                                        <label for="address">{{ trans('public.Address') }} <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="address" >
                                     </div>
                                 </div>
                             </div>
